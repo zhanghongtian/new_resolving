@@ -35,26 +35,23 @@ public class demoController {
         return "hello spring";
     }
 
-
-
-
-
-    @RequestMapping("/saveBookDB")
-    @ResponseBody
-    public void saveBookDB() {
-        try {
-            bookService.saveBookAndBookLog();
-        }catch (Exception e) {
-            throw new GlobalException(new CodeMsg(0,e.getMessage()));
-        }
-    }
-
-    @RequestMapping("/getBook")
-    @ResponseBody
-    public Result<List<Book>> getBook(){
-        List<Book> list = bookDao.findAll();
-        return Result.success(list);
-    }
+//
+//    @RequestMapping("/saveBookDB")
+//    @ResponseBody
+//    public void saveBookDB() {
+//        try {
+//            bookService.saveBookAndBookLog();
+//        }catch (Exception e) {
+//            throw new GlobalException(new CodeMsg(0,e.getMessage()));
+//        }
+//    }
+//
+//    @RequestMapping("/getBook")
+//    @ResponseBody
+//    public Result<List<Book>> getBook(){
+//        List<Book> list = bookDao.findAll();
+//        return Result.success(list);
+//    }
 
     @RequestMapping("/getFileUrl")
     @ResponseBody
