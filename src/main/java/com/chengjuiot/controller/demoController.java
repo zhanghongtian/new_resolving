@@ -34,6 +34,11 @@ public class demoController {
     public String hello(){
         return "hello spring";
     }
+    @RequestMapping("/haha")
+    @ResponseBody
+    public String haha(){
+        return "hello spring";
+    }
 
 //
 //    @RequestMapping("/saveBookDB")
